@@ -1,0 +1,61 @@
+
+@keyframes obrot {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
+
+.min_circle {
+  position: absolute;
+width: 320px;
+height: 320px;
+animation-name: obrot;
+animation-duration: 60s;
+animation-iteration-count: infinite;
+    border-bottom: 10px solid transparent;
+border-top: 10px solid red;
+
+border-radius: 50%;
+animation-timing-function: linear;
+animation-play-state: running;
+}
+.sec_circle {
+    position: absolute;
+width: 300px;
+    height: 300px;
+       top: 50%;
+   left: 50%;
+   margin: -150px 0px 0px -150px;
+    animation-name: obrot;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+        border-bottom: 10px solid transparent;
+border-top: 10px solid green;
+border-radius: 50%;
+animation-timing-function: linear;
+animation-play-state: running;
+}
+.base {
+    position: relative;
+    height: 320px;
+    width: 320px;
+    display: flex;
+        justify-content: center;
+    align-items: center;
+        flex-direction: column;
+ 
+}
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+}
+#czas {
+    color: white;
+}
+#demo {
+    color: white;
+}
