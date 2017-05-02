@@ -21,19 +21,22 @@
         <main>
             <h1>Pomodoro clock!</h1>
             <hr>
-            <p id="demo"></p>
+            <p id="global_time"></p>
             <hr>
             <form>
-            <label for="lekcja">Work time:</label>
-<input type="number" id="lekcja" value="25" min="1" max="240" required>
+            <label for="lesson">Work time:</label>
+<input type="number" id="lesson" value="25" min="1" max="240" required>
      
-                 <label for="przerwa">Break time:</label>
-<input type="number" id="przerwa" value="5" min="1" max="240" required>
-<button type="submit">START/STOP</button>
-      <button type="button">RESET</button>
+                 <label for="pause">Break time:</label>
+<input type="number" id="pause" value="5" min="1" max="240" required>
+<button type="button" id="start">START</button>
+     <button type="button" id="stop">STOP</button>
+     <button type="button" id="resume">RESUME</button>
+      <button type="button" id="reset">RESET</button>
        </form>
        <div class="base group">
-          <h1 id="czas">00</h1>
+        <h1 id="current_event"></h1>
+          <h1 id="current_time">00:00:00</h1>
        <div class="min_circle">
            <div class="sec_circle">
             
