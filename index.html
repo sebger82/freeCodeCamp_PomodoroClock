@@ -21,28 +21,34 @@
         <main>
             <h1>Pomodoro clock!</h1>
             <hr>
-            <p id="global_time"></p>
+            <form class="form-inline">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Work time:</span>
+                    <input type="number" class="form-control" id="lesson" value="25" min="1" max="240" placeholder="min" required>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Break time:</span>
+                    <input type="number" id="pause" class="form-control" value="5" min="1" max="240" placeholder="min" required>
+                </div>
+                <br>
+                <div id="button_container" >
+                    <button type="submit" id="start" class="btn btn-success">START</button>
+                    <button type="button" id="stop" class="btn btn-warning">PAUSE</button>
+                    <button type="button" id="resume" class="btn btn-success">RESUME</button>
+                    <button type="button" id="reset" class="btn btn-danger">RESET</button>
+                </div>
+            </form>
+            <div class="base group">
+                <h1 id="current_event">TIMER</h1>
+                <h1 id="current_time">00:00:00</h1>
+                <div class="min_circle">
+                    <div class="sec_circle">
+                    </div>
+                </div>
+            </div>
             <hr>
-            <form>
-            <label for="lesson">Work time:</label>
-<input type="number" id="lesson" value="25" min="1" max="240" required>
-     
-                 <label for="pause">Break time:</label>
-<input type="number" id="pause" value="5" min="1" max="240" required>
-<button type="button" id="start">START</button>
-     <button type="button" id="stop">STOP</button>
-     <button type="button" id="resume">RESUME</button>
-      <button type="button" id="reset">RESET</button>
-       </form>
-       <div class="base group">
-        <h1 id="current_event"></h1>
-          <h1 id="current_time">00:00:00</h1>
-       <div class="min_circle">
-           <div class="sec_circle">
-            
-           </div>
-       </div>
-       </div>
+            <h3 id="global_time"></h3>
+            <hr>
         </main>
         <footer>
             <div>

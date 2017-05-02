@@ -9,7 +9,7 @@ $(function () {
     // function for global clock
     function myTimer() {
         var d = new Date();
-        document.getElementById("global_time").innerHTML = d.toLocaleTimeString();
+        document.getElementById("global_time").innerHTML = d.toLocaleString();
     }
     
     // main program function for calculaing time
@@ -39,15 +39,15 @@ $(function () {
     }
     
     // event for the START button
-    $("#start").on("click", function () {
-        $("#lesson, #pause").attr("disabled", true);
+    $("form").on("submit", function () {
         event.preventDefault();
+        $("#lesson, #pause").attr("disabled", true);
         lesson = $('#lesson').val();
         pause = $('#pause').val();
         startTimer(lesson * 60, pause * 60);
         $(".min_circle").css({"animation-play-state" : "running", "animation-name" : "rotate_1"});
         $(".sec_circle").css({"animation-play-state" : "running", "animation-name" : "rotate_1"});
-        $(this).hide();
+        $("#start").hide();
         isPaused = false;
         $("#stop").show();
         $('#current_event').text("WORKING");
@@ -86,7 +86,7 @@ $(function () {
         $(".min_circle").css({"animation-play-state" : "paused", "animation-name" : "rotate_2"});
         $(".sec_circle").css({"animation-play-state" : "paused", "animation-name" : "rotate_2"});
         clearInterval(refreshIntervalId);
-        $("#current_event").text("");
+        $("#current_event").text("TIMER");
         $("#current_time").text("00:00:00");
     });
 });
